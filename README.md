@@ -1,9 +1,14 @@
-# api documentation for  [delegates (v1.0.0)](https://github.com/visionmedia/node-delegates#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-delegates.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-delegates) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-delegates.svg)](https://travis-ci.org/npmdoc/node-npmdoc-delegates)
+# npmdoc-delegates
+
+#### api documentation for  [delegates (v1.0.0)](https://github.com/visionmedia/node-delegates#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-delegates.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-delegates) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-delegates.svg)](https://travis-ci.org/npmdoc/node-npmdoc-delegates)
+
 #### delegate methods and accessors to another property
 
-[![NPM](https://nodei.co/npm/delegates.png?downloads=true)](https://www.npmjs.com/package/delegates)
+[![NPM](https://nodei.co/npm/delegates.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/delegates)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-delegates/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-delegates_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-delegates/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-delegates/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-delegates/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-delegates/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-delegates/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-delegates/build/screenCapture.npmPackageListing.svg)
 
@@ -39,17 +44,14 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "tjholowaychuk",
-            "email": "tj@vision-media.ca"
+            "name": "tjholowaychuk"
         },
         {
-            "name": "dominicbarnes",
-            "email": "dominic@dbarnes.info"
+            "name": "dominicbarnes"
         }
     ],
     "name": "delegates",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/visionmedia/node-delegates.git"
@@ -58,16 +60,6 @@
     "version": "1.0.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module delegates](#apidoc.module.delegates)
-
-
-
-# <a name="apidoc.module.delegates"></a>[module delegates](#apidoc.module.delegates)
 
 
 
