@@ -61,12 +61,66 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.delegates">module delegates</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.delegates.delegates">
+            function <span class="apidocSignatureSpan"></span>delegates
+            <span class="apidocSignatureSpan">(proto, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.delegates.toString">
+            function <span class="apidocSignatureSpan">delegates.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.delegates" id="apidoc.module.delegates">module delegates</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.delegates.delegates" id="apidoc.element.delegates.delegates">
+        function <span class="apidocSignatureSpan"></span>delegates
+        <span class="apidocSignatureSpan">(proto, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Delegator(proto, target) {
+  if (!(this instanceof Delegator)) return new Delegator(proto, target);
+  this.proto = proto;
+  this.target = target;
+  this.methods = [];
+  this.getters = [];
+  this.setters = [];
+  this.fluents = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.delegates.toString" id="apidoc.element.delegates.toString">
+        function <span class="apidocSignatureSpan">delegates.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
