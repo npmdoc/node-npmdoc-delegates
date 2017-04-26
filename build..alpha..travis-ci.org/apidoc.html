@@ -72,9 +72,77 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.delegates.toString">
-            function <span class="apidocSignatureSpan">delegates.</span>toString
-            <span class="apidocSignatureSpan">()</span>
+            <a class="apidocElementLiA" href="#apidoc.element.delegates.index">
+            function <span class="apidocSignatureSpan">delegates.</span>index
+            <span class="apidocSignatureSpan">(proto, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">delegates.</span>index.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.delegates.index">module delegates.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.delegates.index.index">
+            function <span class="apidocSignatureSpan">delegates.</span>index
+            <span class="apidocSignatureSpan">(proto, target)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.delegates.index.prototype">module delegates.index.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.delegates.index.prototype.access">
+            function <span class="apidocSignatureSpan">delegates.index.prototype.</span>access
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.delegates.index.prototype.fluent">
+            function <span class="apidocSignatureSpan">delegates.index.prototype.</span>fluent
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.delegates.index.prototype.getter">
+            function <span class="apidocSignatureSpan">delegates.index.prototype.</span>getter
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.delegates.index.prototype.method">
+            function <span class="apidocSignatureSpan">delegates.index.prototype.</span>method
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.delegates.index.prototype.setter">
+            function <span class="apidocSignatureSpan">delegates.index.prototype.</span>setter
+            <span class="apidocSignatureSpan">(name)</span>
             </a>
 
         </li>
@@ -109,16 +177,246 @@
 
 
     <h2>
-        <a href="#apidoc.element.delegates.toString" id="apidoc.element.delegates.toString">
-        function <span class="apidocSignatureSpan">delegates.</span>toString
-        <span class="apidocSignatureSpan">()</span>
+        <a href="#apidoc.element.delegates.index" id="apidoc.element.delegates.index">
+        function <span class="apidocSignatureSpan">delegates.</span>index
+        <span class="apidocSignatureSpan">(proto, target)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
+    <li>description and source-code<pre class="apidocCodePre">function Delegator(proto, target) {
+  if (!(this instanceof Delegator)) return new Delegator(proto, target);
+  this.proto = proto;
+  this.target = target;
+  this.methods = [];
+  this.getters = [];
+  this.setters = [];
+  this.fluents = [];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.delegates.index" id="apidoc.module.delegates.index">module delegates.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.delegates.index.index" id="apidoc.element.delegates.index.index">
+        function <span class="apidocSignatureSpan">delegates.</span>index
+        <span class="apidocSignatureSpan">(proto, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Delegator(proto, target) {
+  if (!(this instanceof Delegator)) return new Delegator(proto, target);
+  this.proto = proto;
+  this.target = target;
+  this.methods = [];
+  this.getters = [];
+  this.setters = [];
+  this.fluents = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.delegates.index.prototype" id="apidoc.module.delegates.index.prototype">module delegates.index.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.delegates.index.prototype.access" id="apidoc.element.delegates.index.prototype.access">
+        function <span class="apidocSignatureSpan">delegates.index.prototype.</span>access
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">access = function (name){
+  return this.getter(name).setter(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+delegate(proto, &#x27;request&#x27;)
+.method(&#x27;acceptsLanguages&#x27;)
+.method(&#x27;acceptsEncodings&#x27;)
+.method(&#x27;acceptsCharsets&#x27;)
+.method(&#x27;accepts&#x27;)
+.method(&#x27;is&#x27;)
+.<span class="apidocCodeKeywordSpan">access</span>(&#x27;querystring&#x27;)
+.access(&#x27;idempotent&#x27;)
+.access(&#x27;socket&#x27;)
+.access(&#x27;length&#x27;)
+.access(&#x27;query&#x27;)
+.access(&#x27;search&#x27;)
+.access(&#x27;status&#x27;)
+.access(&#x27;method&#x27;)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.delegates.index.prototype.fluent" id="apidoc.element.delegates.index.prototype.fluent">
+        function <span class="apidocSignatureSpan">delegates.index.prototype.</span>fluent
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fluent = function (name) {
+  var proto = this.proto;
+  var target = this.target;
+  this.fluents.push(name);
+
+  proto[name] = function(val){
+    if (&#x27;undefined&#x27; != typeof val) {
+      this[target][name] = val;
+      return this;
+    } else {
+      return this[target][name];
+    }
+  };
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  * Merge pull request #12 from kasicka/master
+  * Add license text
+
+0.1.0 / 2014-10-17
+==================
+
+ * adds `.<span class="apidocCodeKeywordSpan">fluent</span>()` to api
+
+0.0.3 / 2014-01-13
+==================
+
+ * fix receiver for .method()
+
+0.0.2 / 2014-01-13
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.delegates.index.prototype.getter" id="apidoc.element.delegates.index.prototype.getter">
+        function <span class="apidocSignatureSpan">delegates.index.prototype.</span>getter
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getter = function (name){
+  var proto = this.proto;
+  var target = this.target;
+  this.getters.push(name);
+
+  proto.__defineGetter__(name, function(){
+    return this[target][name];
+  });
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* @param {String} name
+* @return {Delegator} self
+* @api public
+*/
+
+Delegator.prototype.access = function(name){
+ return this.<span class="apidocCodeKeywordSpan">getter</span>(name).setter(name);
+};
+
+/**
+* Delegator getter `name`.
+*
+* @param {String} name
+* @return {Delegator} self
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.delegates.index.prototype.method" id="apidoc.element.delegates.index.prototype.method">
+        function <span class="apidocSignatureSpan">delegates.index.prototype.</span>method
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">method = function (name){
+  var proto = this.proto;
+  var target = this.target;
+  this.methods.push(name);
+
+  proto[name] = function(){
+    return this[target][name].apply(this[target], arguments);
+  };
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+==================
+
+* adds `.fluent()` to api
+
+0.0.3 / 2014-01-13
+==================
+
+* fix receiver for .<span class="apidocCodeKeywordSpan">method</span>()
+
+0.0.2 / 2014-01-13
+==================
+
+* Object.defineProperty() sucks
+* Initial commit
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.delegates.index.prototype.setter" id="apidoc.element.delegates.index.prototype.setter">
+        function <span class="apidocSignatureSpan">delegates.index.prototype.</span>setter
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setter = function (name){
+  var proto = this.proto;
+  var target = this.target;
+  this.setters.push(name);
+
+  proto.__defineSetter__(name, function(val){
+    return this[target][name] = val;
+  });
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* @param {String} name
+* @return {Delegator} self
+* @api public
+*/
+
+Delegator.prototype.access = function(name){
+ return this.getter(name).<span class="apidocCodeKeywordSpan">setter</span>(name);
+};
+
+/**
+* Delegator getter `name`.
+*
+* @param {String} name
+* @return {Delegator} self
+...</pre></li>
     </ul>
 
 
