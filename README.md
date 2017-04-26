@@ -1,6 +1,6 @@
 # npmdoc-delegates
 
-#### api documentation for  [delegates (v1.0.0)](https://github.com/visionmedia/node-delegates#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-delegates.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-delegates) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-delegates.svg)](https://travis-ci.org/npmdoc/node-npmdoc-delegates)
+#### basic api documentation for  [delegates (v1.0.0)](https://github.com/visionmedia/node-delegates#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-delegates.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-delegates) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-delegates.svg)](https://travis-ci.org/npmdoc/node-npmdoc-delegates)
 
 #### delegate methods and accessors to another property
 
@@ -57,7 +57,8 @@
         "url": "git+https://github.com/visionmedia/node-delegates.git"
     },
     "scripts": {},
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "bin": {}
 }
 ```
 
